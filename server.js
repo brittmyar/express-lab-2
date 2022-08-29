@@ -9,6 +9,11 @@ app.get("/greeting/:name", function(request, response){
 
 });
 
+app.get("/tip/:total/:tipPercentage", function(request, response){
+    response.send('Your tip will be: ' + request.params.tipPercentage)
+
+})
+
 
 app.listen(3000, function(){
     console.log("express is listening to the port")
