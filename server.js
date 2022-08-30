@@ -15,10 +15,10 @@ app.get("/greeting/:name", function(request, response){
 
 });
 
-app.get("/tip/:total/:tipPercentage", function(request, response){
-    response.send('Your tip will be: ' + request.params.tipPercentage)
+app.get("/tip/:total/:tipPercentage", (req, res) => {
+    res.send("Tip: " + req.params.total * (req.params.tipPercentage/100))
+});
 
-})
 
 app.get("/magic/:answer", function(request, response){
     response.send(`<h1>${answers}</h1>`)
