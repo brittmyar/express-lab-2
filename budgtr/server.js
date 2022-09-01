@@ -28,6 +28,12 @@ app.get("/budgets/:index", (req, res)=>{
     })
 });
 
+app.post("/budgets" , (request, respond) => {
+    console.log(request.body)
+
+    budget.push(request.body)
+respond.redirect("/budgets")
+});
 
 
 
