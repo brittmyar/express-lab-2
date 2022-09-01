@@ -12,6 +12,11 @@
 <body>
     <div class="container">
         <h1>Budgtr</h1>
+        <% let bankAccount=0; for (i=0; i < allBudget.length; i++) {bankAccount+=parseInt(allBudget[i].amount)}%>
+            <%if (bankAccount < 0)%> <style>body {background-color: red;}</style>
+            <%if (bankAccount > 1000)%> <style>body {background-color: green;}</style>
+                
+                <h4><%= bankAccount; %></h4>
         <table>
             <% for (i = 0; i < allBudget.length; i++) { %>
             <tr>
