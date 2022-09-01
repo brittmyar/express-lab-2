@@ -71,5 +71,3 @@ module.exports = [
       tags: ["pets"],
     },
   ]
-
-  module.exports = budget 
