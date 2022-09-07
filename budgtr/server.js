@@ -8,7 +8,7 @@ const port = 3000;
 
 //MIDDLEWARE
 app.use(express.urlencoded({ extended: false }));
-
+app.use(express.static('public'))
 
 
 // DEFINE OUR ROUTES
